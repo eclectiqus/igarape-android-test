@@ -8,7 +8,8 @@
     tools:context=".MainActivity">
 
     <TextView android:id="@+id/myLat" android:text="@string/labelLat" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp" />
 
     <TextView android:id="@+id/myLon" android:text="@string/labelLon" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

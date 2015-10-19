@@ -20,6 +20,8 @@ import com.google.android.gms.location.LocationServices;
      private TextView myLat;
      private TextView myLon;
 
+     // clean and simple Google Play Services urged over android.location
+     // http://developer.android.com/training/location/retrieve-current.html
      protected synchronized void buildGoogleApiClient() {
          myGoogleApiClient = new GoogleApiClient.Builder(this)
                  .addConnectionCallbacks(this)
@@ -30,6 +32,7 @@ import com.google.android.gms.location.LocationServices;
          myGoogleApiClient.connect();
 
      }
+
      @Override
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
@@ -39,7 +42,6 @@ import com.google.android.gms.location.LocationServices;
          myLon = (TextView) findViewById(R.id.myLon);
 
          buildGoogleApiClient();
-
 
      }
 
@@ -64,7 +66,6 @@ import com.google.android.gms.location.LocationServices;
 
          return super.onOptionsItemSelected(item);
      }
-
 
      @Override
      public void onConnected(Bundle connectionHint) {
